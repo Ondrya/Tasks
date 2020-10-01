@@ -6,6 +6,8 @@ namespace Task570
     {
         static void Main(string[] args)
         {
+            ShowInfo();
+
             Console.Write($"Сколько чисел Мерсенна вывести (макс. 64): ");
             var _n = Console.ReadLine();
             try
@@ -18,6 +20,18 @@ namespace Task570
             {
                 Console.WriteLine(e.Message);
             }
+        }
+
+        /// <summary>
+        /// Вывод справки
+        /// </summary>
+        private static void ShowInfo()
+        {
+            Console.WriteLine("/************** Справка **************/");
+            Console.WriteLine($" Эти числа примечательны тем, что некоторые из таких чисел являются простыми при больших значениях n.");
+            Console.WriteLine($" Самым большое найленное число Мерсенна при n=82589933.");
+            Console.WriteLine("/************** /Справка **************/");
+            Console.WriteLine();
         }
 
         /// <summary>
