@@ -6,13 +6,13 @@ namespace Task570
     {
         static void Main(string[] args)
         {
-            Console.Write($"Сколько чисел Мерссена вывести: ");
+            Console.Write($"Сколько чисел Мерсенна вывести (макс. 64): ");
             var _n = Console.ReadLine();
             try
             {
                 var N = ulong.Parse(_n);
                 if (N >= 65) throw new ArgumentException("Число слишком большое. MaxValue: 64");
-                GetMersennePrime(N);
+                ВывестиЧислаМерсенна(N);
             }
             catch (Exception e)
             {
@@ -20,6 +20,19 @@ namespace Task570
             }
         }
 
+        /// <summary>
+        /// Вывести на консоль последовательность первых N чисел Мерсенна
+        /// </summary>
+        /// <param name="N"></param>
+        private static void ВывестиЧислаМерсенна(ulong N)
+        {
+            GetMersennePrime(N);
+        }
+
+        /// <summary>
+        /// Output to console Mersonne prime
+        /// </summary>
+        /// <param name="N"></param>
         private static void GetMersennePrime(ulong N)
         {
             ulong n = 0;
